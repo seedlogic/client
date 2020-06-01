@@ -102,6 +102,8 @@ document.addEventListener("DOMContentLoaded", function() {
             var referrer = getCookie("_r");
             queryString = `?utm_source=${source}&utm_medium=${medium}&utm_campaign=${campaign}&utm_content=${referrer}`;
             window.location.href = `${href}${queryString}`;
+
+            // test
         }
     });
 });
