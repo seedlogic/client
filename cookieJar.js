@@ -75,15 +75,18 @@ document.addEventListener("DOMContentLoaded", function() {
     function checkCookie() {
         var user = getCookie("_u");
         if (user == "") {
+            var sem = urlParams.get("gclid")
+                ? urlParams.get("gclid")
+                : "organic_or_direct";
             var source = urlParams.get("utm_source")
                 ? urlParams.get("utm_source")
                 : refSource();
             var medium = urlParams.get("utm_medium")
                 ? urlParams.get("utm_medium")
-                : "organic_or_direct";
+                : sem;
             var campaign = urlParams.get("utm_campaign")
                 ? urlParams.get("utm_campaign")
-                : "organic_or_direct";
+                : sem;
             setCookie("_u", true, 365);
             setCookie("_r", refSource(), 365);
             setCookie("_s", source, 365);
