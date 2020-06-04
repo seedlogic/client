@@ -75,9 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function checkCookie() {
         var user = getCookie("_u");
         if (user == "") {
-            var sem = urlParams.get("gclid")
-                ? urlParams.get("gclid")
-                : "organic_or_direct";
+            var sem = urlParams.get("gclid") ? "paid_sem" : "organic_or_direct";
             var source = urlParams.get("utm_source")
                 ? urlParams.get("utm_source")
                 : refSource();
