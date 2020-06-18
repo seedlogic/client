@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+(function() {
 	function refSource() {
 		if (document.referrer === "") {
 			return "direct";
